@@ -15,16 +15,16 @@ services:
   #   depends_on:
   #     - 'db'
   # client
-  # client:
-  #   build:
-  #     context: ./client
-  #     dockerfile: Dockerfile
-  #   container_name: vue-client
-  #   ports:
-  #     - 8080:8080
-  #   tty: true # コンテナの起動永続化
-  #   volumes:
-  #     - ./client:/usr/src/app
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: vue-client
+    ports:
+      - 8080:8080
+    tty: true # コンテナの起動永続化
+    volumes:
+      - ./client:/usr/src/app
   # # DB
   # db:
   #   build:

@@ -1,7 +1,7 @@
 # 開発環境
-FROM node:lts-alpine
+FROM node:12.16.3-alpine
 WORKDIR /usr/src/app
 RUN apk update && \
-    npm install -g npm @vue/cli
+    npm install -g npm @vue/cli@3.10.0
 
 CMD ["/bin/sh"]
